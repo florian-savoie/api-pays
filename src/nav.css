@@ -1,0 +1,14 @@
+.nav{
+    display: flex;
+    justify-content: space-around;
+    color: beige;
+}
+a{
+    text-decoration: none;
+    color: rgb(113, 110, 110);
+    }
+    .activelink{
+        font-weight: bold;
+        color: #07c5fa;
+    }
+    
