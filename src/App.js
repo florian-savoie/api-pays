@@ -5,7 +5,7 @@ import CountryList from './CountryList.js';
 import SearchCountry from './SearchCountry.js';
 import Todolist from './Todolist.js';
 import Home from './Home.js';
-import Test from './Test.js';
+import Infos from './infosage.js';
 
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
       <Route path="/search" element={<SearchCountry />}></Route>
       <Route path="/list" element={<CountryList />}></Route>
       <Route path="/todolist" element={<Todolist />}></Route>
-      <Route path="/test" element={<Test />}></Route>
+      <Route path="/infosage" element={<Infos />}></Route>
       </Routes>
 </Router>
   );

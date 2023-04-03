@@ -22,7 +22,7 @@ export default function SearchCountry() {
     setPays({ ...pays, [name]: value });
   }
 
-
+console.log(pays.length);
 
   return (
     <div>
@@ -43,7 +43,8 @@ export default function SearchCountry() {
         <h1>Il y a au total : {compteur} Pays </h1>
 
         <div className="card">
-          {data.map((item) => {
+
+       { data.map((item) => {
 if (item.name.common.toLowerCase().includes(pays.paysname.toLowerCase())) {
   return (
                 <div className="cardpays" key={item.official}>
