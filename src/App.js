@@ -1,11 +1,9 @@
-import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Nav from './Nav.js';
-import CountryList from './CountryList.js';
-import SearchCountry from './SearchCountry.js';
-import Todolist from './Todolist.js';
-import Home from './Home.js';
-import Infos from './infosage.js';
+import Nav from './components/Navbar/Nav.js';
+import CountryList from './pages/CountryList/CountryList.js';
+import SearchCountry from './pages/SearchCountry/SearchCountry.js';
+import Todolist from './pages/TodoList/Todolist.js';
+import Home from './pages/Home/Home.js';
 
 
 function App() {
@@ -18,7 +16,6 @@ function App() {
       <Route path="/search" element={<SearchCountry />}></Route>
       <Route path="/list" element={<CountryList />}></Route>
       <Route path="/todolist" element={<Todolist />}></Route>
-      <Route path="/infosage" element={<Infos />}></Route>
       </Routes>
 </Router>
   );

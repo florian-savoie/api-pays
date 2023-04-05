@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import "./index.css";
+import "./countrylist.css";
 
 export default function CountryList() {
   const [data, setData] = useState([]);
