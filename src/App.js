@@ -4,6 +4,7 @@ import CountryList from './pages/CountryList/CountryList.js';
 import SearchCountry from './pages/SearchCountry/SearchCountry.js';
 import Todolist from './pages/TodoList/Todolist.js';
 import Home from './pages/Home/Home.js';
+import Exercices from './pages/Exercices/Exercices.js';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Route path="/search" element={<SearchCountry />}></Route>
       <Route path="/list" element={<CountryList />}></Route>
       <Route path="/todolist" element={<Todolist />}></Route>
+      <Route path="/Exercices" element={<Exercices />}></Route>
       </Routes>
 </Router>
   );

@@ -6,7 +6,7 @@
     align-items: center;
     }
     .cardpays{
-      width: 25vh;
+      width: calc(25% - 20px); /* Réduire la largeur de chaque élément */
       height: 250px;
       display: flex;
       flex-direction: column;

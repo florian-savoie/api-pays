@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import "./countrylist.css";
+import ShowPays from '../../components/Pays/ShowPays';
 
 export default function CountryList() {
   const [data, setData] = useState([]);
@@ -15,6 +16,7 @@ export default function CountryList() {
     setCompteur(data.length);
   }, [data]);
 
+  
   return (
     <div className='blockcentral'>
       <h1>Voici la liste des pays </h1>
@@ -22,12 +24,14 @@ export default function CountryList() {
 
       <div className='card'>
         {data.map((item) => (
-          <div className='cardpays' key={item.official}>
-            <img src={item.flags.svg}></img>
-            <p>pays : {item.name.common}</p>
-            <p>capital : {item.capital}</p>
-            <p>population {item.population}</p>
-          </div>
+          <ShowPays
+          name={item.name.common}
+          key={item.official}
+          flags={item.flags.svg}
+          capital={item.capital}
+          pop={item.population}
+          itemKey={item.official}
+        />
         ))}
       </div>
 

@@ -1,0 +1,36 @@
+h3{
+text-align: center;
+margin-top: 20px;}
+h1{
+    margin-top: 20px;
+}
+.tache {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .divtodolist {
+    text-align: center;
+    height: 250px;
+    width: calc(33.33% - 20px); /* Réduire la largeur de chaque élément */
+    background-color: aliceblue;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+    margin-top: 10px;
+    margin-right: 10px; /* Ajouter une marge à droite pour séparer les éléments */
+  }
+p{
+    margin-top: 30px;
+}
+form{
+    margin: auto;
+    width: 500px;
+}
+.centerbutton{
+    text-align: center;
+    margin-top: 20px;
+}
+.description{
+    height: 40%;
+}

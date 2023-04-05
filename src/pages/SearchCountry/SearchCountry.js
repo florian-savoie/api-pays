@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-
+import "./searchcountry.css";
+import ShowPays from "../../components/Pays/ShowPays";
 
 export default function SearchCountry() {
   const [data, setData] = useState([]);
@@ -22,12 +23,12 @@ export default function SearchCountry() {
     setPays({ ...pays, [name]: value });
   }
 
-console.log(pays.length);
-
   return (
     <div>
+      <div className="container recherche">
       <form action="">
         <input
+        className="mt-5 mx-5"
           type="text"
           name="paysname"
           id="paysname"
@@ -35,9 +36,10 @@ console.log(pays.length);
           onChange={(evt) => handleChange(evt)}
           placeholder="rechercher un pays"
         />
-      </form>
+           <p>Vous avez saisi : {pays.paysname}</p>
 
-      <p>Vous avez saisi : {pays.paysname}</p>
+ </form>
+      </div>
       <div className="blockcentral">
         <h1>Voici la liste des pays </h1>
         <h1>Il y a au total : {compteur} Pays </h1>
@@ -47,13 +49,15 @@ console.log(pays.length);
        { data.map((item) => {
 if (item.name.common.toLowerCase().includes(pays.paysname.toLowerCase())) {
   return (
-                <div className="cardpays" key={item.official}>
-                  <img src={item.flags.svg}></img>
-                  <p>pays : {item.name.common}</p>
-                  <p>capital : {item.capital}</p>
-                  <p>population {item.population}</p>
-                </div>
-              );
+    
+      <ShowPays
+        name={item.name.common}
+        key={item.official}
+        flags={item.flags.svg}
+        capital={item.capital}
+        pop={item.population}
+        itemKey={item.official}
+      />              );
             } else {
               return null;
             }

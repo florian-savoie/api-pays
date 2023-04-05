@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import "./elementtodolist.css";
+import ShowTache from './ShowTache';
 function FormTodolist() {
 
     const [listetache , setlistetache] = useState([]);
@@ -31,36 +31,41 @@ function FormTodolist() {
     };
     const handledeletetache = (index) => {
         const newListeTache = [...listetache];
-        alert(index);
         newListeTache.splice(index, 1);
         setlistetache(newListeTache);
     };
     return (
         <>
-        <form onSubmit={handleSubmit}>
-            <label>
-                tache a faire 
-                <input type="text" value={text} onChange={handleTextChange} />
-            </label>
-            <br />
-            <label>
-                description : 
-                <input type="description" value={description} onChange={handledescriptionChange} />
-            </label>
-            <br />
-            <button type="submit"> publier </button>
-        </form>
+    <form onSubmit={handleSubmit}>
+      <div className="form-group">
+        <label htmlFor="task">Tâche à faire:</label>
+        <input
+          type="text"
+          className="form-control"
+          id="task"
+          value={text}
+          onChange={handleTextChange}
+        />
+      </div>
+      <div className="form-group">
+        <label htmlFor="description">Description:</label>
+        <input
+          type="text"
+          className="form-control"
+          id="description"
+          value={description}
+          onChange={handledescriptionChange}
+        />
+      </div>
+      <div className='centerbutton'>
+      <button type="submit" className="btn btn-primary">
+        Publier
+      </button>
+      </div>
+    </form>
         
+      <ShowTache listetache={listetache} handledeletetache={handledeletetache} />
 
-        {listetache.map((tache, index) => (
-            <div className="tache" key={index}>
-                <div className='divtodolist'>
-                    <h2>tache : {tache.text}</h2>
-                    <p> description :{tache.description}</p>
-                    <button onClick={() => handledeletetache(index)}>Supprimer</button>
-                </div>
-            </div>
-        ))}
 </>
 )}
 export default FormTodolist; 
