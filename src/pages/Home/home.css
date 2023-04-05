@@ -1,0 +1,10 @@
+.img img{
+width: 80%;
+height: 50vh;
+border-radius: 2rem !important;
+}
+.img{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
