@@ -10,6 +10,7 @@ export default function Nav() {
          <li> <NavLink to="/list" className={({isActive}) =>(isActive? "activelink" : undefined)}>liste des pays</NavLink></li>        
          <li> <NavLink to="/todolist" className={({isActive}) =>(isActive? "activelink" : undefined)}>Todolist</NavLink></li>        
          <li> <NavLink to="/exercices" className={({isActive}) =>(isActive? "activelink" : undefined)}>Exercices</NavLink></li>        
+         <li> <NavLink to="/blog" className={({isActive}) =>(isActive? "activelink" : undefined)}>Blog</NavLink></li>        
       </ul>
     </div>
   );
