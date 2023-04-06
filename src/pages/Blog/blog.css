@@ -1,0 +1,26 @@
+.liarticle{
+    height: 30rem;
+    width: 30%;
+    border: solid 2px black;
+    border-radius: 0.8rem;
+    list-style: none;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.ularticle{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.lilisteblog{
+    list-style: none;
+
+}
+.imagearticle{
+    height: 50%;
+    width: 50%;
+    margin: auto;
+}
